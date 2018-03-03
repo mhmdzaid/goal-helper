@@ -17,6 +17,9 @@
 		165611452046A1C500F98B8C /* goal_helper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 165611432046A1C500F98B8C /* goal_helper.xcdatamodeld */; };
 		165611472046A1C500F98B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165611462046A1C500F98B8C /* Assets.xcassets */; };
 		1656114A2046A1C500F98B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165611482046A1C500F98B8C /* LaunchScreen.storyboard */; };
+		168E8A09204A7E60004C5BE8 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E8A08204A7E60004C5BE8 /* UIViewExt.swift */; };
+		168E8A0B204A85D7004C5BE8 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E8A0A204A85D7004C5BE8 /* UIButtonExt.swift */; };
+		168E8A0D204A8F08004C5BE8 /* finishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E8A0C204A8F08004C5BE8 /* finishGoalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		165611462046A1C500F98B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		165611492046A1C500F98B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1656114B2046A1C500F98B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		168E8A08204A7E60004C5BE8 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		168E8A0A204A85D7004C5BE8 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		168E8A0C204A8F08004C5BE8 /* finishGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finishGoalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 			children = (
 				1656113E2046A1C500F98B8C /* GoalsVC.swift */,
 				162CC6032047676300994F65 /* CreateGoalVC.swift */,
+				168E8A0C204A8F08004C5BE8 /* finishGoalVC.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -99,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				162CC605204772C200994F65 /* UiViewControllerExt.swift */,
+				168E8A08204A7E60004C5BE8 /* UIViewExt.swift */,
+				168E8A0A204A85D7004C5BE8 /* UIButtonExt.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -187,8 +196,11 @@
 				162CC6042047676300994F65 /* CreateGoalVC.swift in Sources */,
 				162CC60220475C2600994F65 /* GoalType.swift in Sources */,
 				1656113F2046A1C500F98B8C /* GoalsVC.swift in Sources */,
+				168E8A09204A7E60004C5BE8 /* UIViewExt.swift in Sources */,
 				162CC606204772C200994F65 /* UiViewControllerExt.swift in Sources */,
 				165611452046A1C500F98B8C /* goal_helper.xcdatamodeld in Sources */,
+				168E8A0B204A85D7004C5BE8 /* UIButtonExt.swift in Sources */,
+				168E8A0D204A8F08004C5BE8 /* finishGoalVC.swift in Sources */,
 				1656113D2046A1C500F98B8C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
