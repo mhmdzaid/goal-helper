@@ -65,7 +65,7 @@ extension GoalsVC : UITableViewDelegate ,UITableViewDataSource{
             return UITableViewCell()
         }
         let goal = goals[indexPath.row]
-        cell.configureCell(description:GoalType(rawValue:goal.goalType!)!, goal:goal.goalDiscription!, progress: Int(goal.goalCompletionValue))
+        cell.configureCell(goal: goal)
         if (indexPath.row % 2 == 0) {
             cell.backgroundColor = #colorLiteral(red: 0.9393044099, green: 0.9317515005, blue: 0.9066636459, alpha: 1)
         }
@@ -93,8 +93,13 @@ extension GoalsVC : UITableViewDelegate ,UITableViewDataSource{
             self.fetchCoreData()
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+        let addAction = UITableViewRowAction(style: .normal, title: "Add 1") { (rowAction, indexPath) in
+            self.setProgress(atIndexPath: indexPath)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
         deleteAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        return [deleteAction]
+        addAction.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.565460205, blue: 0.07596772964, alpha: 1)
+        return [deleteAction,addAction]
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return goals.count
@@ -112,6 +117,22 @@ extension GoalsVC : UITableViewDelegate ,UITableViewDataSource{
 
 extension GoalsVC{
     
+    func setProgress(atIndexPath indexPath : IndexPath){
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else{return }
+        let GOAl  = goals[indexPath.row]
+        if GOAl.progress < GOAl.goalCompletionValue {
+            GOAl.progress = GOAl.progress + 1
+        }
+        else{
+            return
+        }
+        do{
+            try managedContext.save()
+        }catch{
+            debugPrint("could not set progress \(error.localizedDescription)")
+        }
+        
+    }
     func fetch(completion:(_ complete :Bool)->()){
         guard let managedContext = appDelegate?.persistentContainer.viewContext else{return }
 

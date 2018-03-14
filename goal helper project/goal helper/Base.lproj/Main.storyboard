@@ -99,6 +99,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNF-Dl-jCh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL COMPLETE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBz-mv-xLX">
+                                                            <rect key="frame" x="91" y="15.5" width="193.5" height="31.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.80332817030000003" blue="0.18217760550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="pBz-mv-xLX" firstAttribute="centerY" secondItem="dNF-Dl-jCh" secondAttribute="centerY" id="pPG-WY-s9F"/>
+                                                        <constraint firstItem="pBz-mv-xLX" firstAttribute="centerX" secondItem="dNF-Dl-jCh" secondAttribute="centerX" id="pdz-t3-AYc"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="sMD-lF-Lv2"/>
+                                                        <constraint firstAttribute="height" constant="62" id="zHa-24-lcY"/>
+                                                    </constraints>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOx-Cc-LkP">
                                                     <rect key="frame" x="318" y="10" width="42" height="41"/>
                                                     <constraints>
@@ -164,15 +182,20 @@
                                                 <constraint firstAttribute="bottom" secondItem="e9x-MY-1bE" secondAttribute="bottom" id="42y-xa-rer"/>
                                                 <constraint firstItem="e9x-MY-1bE" firstAttribute="leading" secondItem="mjG-ug-VTI" secondAttribute="leading" id="4rt-Us-CkW"/>
                                                 <constraint firstItem="GOx-Cc-LkP" firstAttribute="centerY" secondItem="mjG-ug-VTI" secondAttribute="centerY" id="9LY-Ql-hfH"/>
+                                                <constraint firstItem="dNF-Dl-jCh" firstAttribute="leading" secondItem="mjG-ug-VTI" secondAttribute="leading" id="CDm-Re-jQ9"/>
                                                 <constraint firstAttribute="bottom" secondItem="e9x-MY-1bE" secondAttribute="bottom" id="KMV-3T-FoB"/>
                                                 <constraint firstItem="GOx-Cc-LkP" firstAttribute="top" secondItem="mjG-ug-VTI" secondAttribute="top" constant="10" id="Z0O-Ak-Qgg"/>
+                                                <constraint firstAttribute="bottom" secondItem="dNF-Dl-jCh" secondAttribute="bottom" id="a4F-ti-kp8"/>
+                                                <constraint firstItem="dNF-Dl-jCh" firstAttribute="top" secondItem="mjG-ug-VTI" secondAttribute="top" id="bhw-bZ-lIS"/>
                                                 <constraint firstAttribute="bottom" secondItem="GOx-Cc-LkP" secondAttribute="bottom" constant="10" id="g0l-3z-GpT"/>
                                                 <constraint firstAttribute="trailing" secondItem="GOx-Cc-LkP" secondAttribute="trailing" constant="15" id="rA3-V3-zcT"/>
+                                                <constraint firstAttribute="trailing" secondItem="dNF-Dl-jCh" secondAttribute="trailing" id="sMR-xQ-Oas"/>
                                                 <constraint firstItem="GOx-Cc-LkP" firstAttribute="leading" secondItem="e9x-MY-1bE" secondAttribute="trailing" constant="10" id="xe9-Gn-gVa"/>
                                                 <constraint firstItem="e9x-MY-1bE" firstAttribute="top" secondItem="mjG-ug-VTI" secondAttribute="top" id="yjO-fS-jye"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="completionView" destination="dNF-Dl-jCh" id="cm0-SS-DTR"/>
                                             <outlet property="descriptionLabel" destination="Kr9-Kh-52n" id="Mic-lh-2yC"/>
                                             <outlet property="goalLabel" destination="ZbT-M1-dUZ" id="AJ6-Za-lLZ"/>
                                             <outlet property="goalProgressLapel" destination="GOx-Cc-LkP" id="rg8-Dn-n0O"/>
@@ -201,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135" y="51"/>
+            <point key="canvasLocation" x="-135.19999999999999" y="50.824587706146929"/>
         </scene>
         <!--Create GoalVC-->
         <scene sceneID="X0P-Yk-rOa">
