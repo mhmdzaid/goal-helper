@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 class finishGoalVC: UIViewController {
-
+    
     @IBOutlet weak var creatGoalBtn: UIButton!
     @IBOutlet weak var pointsLbl: UITextField!
     var goalDiscription : String!
@@ -26,7 +26,7 @@ class finishGoalVC: UIViewController {
         super.viewDidLoad()
         creatGoalBtn.bindToKeyboard()
     }
-
+    
     
     @IBAction func backBtnPressed(_ sender: Any) {
         dismissVC()
@@ -37,7 +37,7 @@ class finishGoalVC: UIViewController {
                 if complete{
                     self.dismiss(animated: true, completion: nil)
                 }
-        }}
+            }}
     }
     
     
@@ -52,7 +52,7 @@ class finishGoalVC: UIViewController {
         goal.goalCompletionValue = Int32(pointsLbl.text!)!
         goal.progress = Int32(0)
         do {
-         try managedContext.save()
+            try managedContext.save()
             print("comoleted successsfully ")
             completion(true)
         }

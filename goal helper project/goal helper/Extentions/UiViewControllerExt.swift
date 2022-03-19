@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     func presentVC(_ viewControllerToPresent:UIViewController){
-    let transition = CATransition()
+        let transition = CATransition()
         transition.duration = 0.3
         transition.type = CATransitionType.push
         transition.subtype = CATransitionSubtype.fromRight
@@ -19,7 +19,6 @@ extension UIViewController {
     }
     
     func presentSecondaryDetail(_ viewControllerToPresent : UIViewController){
-        
         let transition = CATransition()
         transition.duration = 0.3
         transition.type = CATransitionType.reveal
@@ -39,6 +38,6 @@ extension UIViewController {
         transition.subtype = CATransitionSubtype.fromLeft
         self.view.window?.layer.add( transition, forKey: kCATransition)
         dismiss(animated: false, completion:nil)
-    
+        
     }
 }

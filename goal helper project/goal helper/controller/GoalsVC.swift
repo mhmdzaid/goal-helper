@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 let appDelegate  = UIApplication.shared.delegate as? AppDelegate
 class GoalsVC: UIViewController{
-
+    
     @IBOutlet weak var tableView: UITableView!
     var goals : [Goal] = []
     @IBAction func addGoalPressed(_ sender: Any) {
@@ -22,7 +22,7 @@ class GoalsVC: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.isHidden = false
@@ -48,13 +48,13 @@ class GoalsVC: UIViewController{
     
     
     override func viewWillAppear(_ animated: Bool) {
-    print("table is here ")
+        print("table is here ")
         super.viewWillAppear(animated)
         self.fetchCoreData()
         tableView.reloadData()
     }
     
-
+    
 }
 
 extension GoalsVC : UITableViewDelegate ,UITableViewDataSource{
@@ -75,7 +75,7 @@ extension GoalsVC : UITableViewDelegate ,UITableViewDataSource{
         }
         cell.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         cell.layer.borderWidth = 2
-       
+        
         return cell
     }
     
@@ -135,7 +135,7 @@ extension GoalsVC{
     }
     func fetch(completion:(_ complete :Bool)->()){
         guard let managedContext = appDelegate?.persistentContainer.viewContext else{return }
-
+        
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Goal")
         do{
             goals =  try managedContext.fetch(fetchRequest) as! [Goal]

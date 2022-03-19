@@ -23,7 +23,7 @@ class GoalCell : UITableViewCell {
         if goal.progress == goal.goalCompletionValue {
             self.completionView.isHidden = false
         }else{
-         self.completionView.isHidden = true
+            self.completionView.isHidden = true
         }
         
     }

@@ -9,13 +9,13 @@
 import UIKit
 
 class CreateGoalVC: UIViewController ,UITextViewDelegate{
-
+    
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var longTerm: UIButton!
     @IBOutlet weak var shortTerm: UIButton!
     @IBOutlet weak var goalText: UITextView!
     var goalType : GoalType = .shortTerm
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         shortTerm.layer.cornerRadius = 20
@@ -26,7 +26,7 @@ class CreateGoalVC: UIViewController ,UITextViewDelegate{
         
         
     }
-   
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         goalText.text = ""
         goalText.textColor = UIColor.black
@@ -56,6 +56,6 @@ class CreateGoalVC: UIViewController ,UITextViewDelegate{
         self.dismissVC()
     }
     
-
-
+    
+    
 }
